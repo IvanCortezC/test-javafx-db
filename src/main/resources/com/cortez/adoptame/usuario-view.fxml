@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cortez.adoptame.controller.UsuarioController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <HBox prefHeight="50.0" prefWidth="200.0">
+      <children>
+         <Label text="Nombre" />
+         <TextField promptText="Ingrese nombre" fx:id="txtNombre" />
+         <Button mnemonicParsing="false" text="Crear" onMouseClicked="#onCrear" />
+      </children>
+   </HBox>
+    <TableView fx:id="tablaUsuarios">
+        <columns>
+            <TableColumn fx:id="colId" text="ID" prefWidth="60.0"/>
+            <TableColumn fx:id="colNombre" text="Nombre" prefWidth="160.0"/>
+        </columns>
+        <placeholder>
+            <Label text="tabla sin datos!"/>
+        </placeholder>
+    </TableView>
+</VBox>
